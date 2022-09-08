@@ -1,4 +1,4 @@
-{% set version = "0.1.5" %}
+{% set version = "0.1.6" %}
 
 package:
   name: mi-fieldcalc
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/metno/mi-fieldcalc/archive/v{{ version }}.tar.gz
-  sha256: 8c8a9b37ffdabca82430492dc3ef4901c640eea377e5c8e55cab2212408e1d3a
+  sha256: ebd5ce00557c69005343535fff589c682b2aeed5e583215814d015b24e05ed13
   folder: source
 
 build:
