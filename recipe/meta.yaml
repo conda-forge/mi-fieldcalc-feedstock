@@ -10,12 +10,13 @@ source:
   folder: source
 
 build:
-  number: 3
+  number: 4
   skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - libgomp      # [linux]
     - llvm-openmp  # [osx]
     - cmake
@@ -28,7 +29,6 @@ requirements:
     - pybind11-abi
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - _openmp_mutex
 
 test:
