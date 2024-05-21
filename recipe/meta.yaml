@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - libgomp      # [linux]
     - llvm-openmp  # [osx]
     - cmake
@@ -28,7 +29,6 @@ requirements:
     - pybind11-abi
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - _openmp_mutex
 
 test:
