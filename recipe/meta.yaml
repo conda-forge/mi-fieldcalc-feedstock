@@ -1,4 +1,4 @@
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 
 package:
   name: mi-fieldcalc
@@ -6,16 +6,17 @@ package:
 
 source:
   url: https://github.com/metno/mi-fieldcalc/archive/v{{ version }}.tar.gz
-  sha256: ebd5ce00557c69005343535fff589c682b2aeed5e583215814d015b24e05ed13
+  sha256: 3fba0ab723669c0eecee2bf076df94c8f95bd7e226e964faafc438dab3f75999
   folder: source
 
 build:
-  number: 3
+  number: 0
   skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - libgomp      # [linux]
     - llvm-openmp  # [osx]
     - cmake
@@ -28,7 +29,6 @@ requirements:
     - pybind11-abi
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - _openmp_mutex
 
 test:
