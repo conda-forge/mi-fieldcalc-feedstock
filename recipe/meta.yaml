@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/metno/mi-fieldcalc/archive/v{{ version }}.tar.gz
-  sha256: d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed
+  sha256: 3fba0ab723669c0eecee2bf076df94c8f95bd7e226e964faafc438dab3f75999
   folder: source
 
 build:
